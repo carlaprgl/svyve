@@ -1,3 +1,5 @@
+//import necessary packages
+
 import React from "react";
 import { createStackNavigator, createAppContainer } from "react-navigation"; // Version can be specified in package.json
 import ProgressCircle from "react-native-progress-circle";
@@ -27,53 +29,6 @@ import Category from "../../components/Explore/Category";
 import TreesToSelect from "../../components/Explore/TreesToSelect";
 
 export default class Community extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isSwitchOn: false,
-      nextRoute: "YourResults",
-      multipleProducts: false,
-      activeProduct: 0,
-      selectedPackaging: false,
-      selectedProducts: [
-        {
-          id: 0,
-          productName: "",
-          productCountry: "",
-          productPackaging: false
-        }
-      ],
-      products: [
-        {
-          value: "Apple"
-        },
-        {
-          value: "Banana"
-        },
-        {
-          value: "Cucumber"
-        }
-      ],
-      countries: [
-        {
-          value: "Australia"
-        },
-        {
-          value: "Germany"
-        },
-        {
-          value: "Spain"
-        },
-        {
-          value: "Turkey"
-        },
-        {
-          value: "Ukraine"
-        }
-      ]
-    };
-  }
-
   static navigationOptions = {
     title: "Your Community Forests",
     headerStyle: {
@@ -95,24 +50,12 @@ export default class Community extends React.Component {
       selectedPackaging
     } = this.state;
 
-    const selectedProduct = selectedProducts[activeProduct];
-    const { productName, productCountry, productPackaging } = selectedProduct;
-
-    // const { nextRoute } = this.props.navigation.navigate.state;
-
-    const productList = selectedProducts.map(product => (
-      <TouchableOpacity
-        key={product.productName}
-        onPress={() => this.setState({ activeProduct: product.id })}
-        style={
-          product.id == activeProduct ? { backgroundColor: "#89A998" } : null
-        }
-      >
-        <Text>{product.productName + " " + product.productCountry}</Text>
-      </TouchableOpacity>
-    ));
-
     return (
+      //define screen
+      //define dropdown button for selecting communities - join forests
+      //see you forest and your tree planting
+      //define button to go back to scanner to scan another product
+
       <View>
         <Button
           style={{

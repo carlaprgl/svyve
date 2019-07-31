@@ -1,3 +1,4 @@
+//import necessary packages
 import * as React from "react";
 import { Text, View, StyleSheet, Button, Alert, Image } from "react-native";
 import { IconButton } from "react-native-paper";

@@ -1,3 +1,4 @@
+//import necessary packages
 import React, { Fragment } from "react";
 
 import { createStackNavigator, createAppContainer } from "react-navigation"; // Version can be specified in package.json

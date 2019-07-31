@@ -1,3 +1,5 @@
+//import necessary packages
+
 import React from "react";
 import { createStackNavigator, createAppContainer } from "react-navigation"; // Version can be specified in package.json
 import {
@@ -35,13 +37,6 @@ import ScProducts2 from "../../components/Explore/ScProducts2";
 import ScProducts3 from "../../components/Explore/ScProducts3";
 import Category from "../../components/Explore/Category";
 
-//Farbe grün nicht so grell
-//Choose und i weiter ausseinander
-//Low & High anpassen, evtl Icon
-//Svyve it
-
-// import styles from "./styles";
-
 export default class Info1 extends React.Component {
   static navigationOptions = {
     title: "More Info",
@@ -63,6 +58,10 @@ export default class Info1 extends React.Component {
 
   render() {
     return (
+
+      //define screen
+
+
       <View style={styles.container}>
         <View
           style={{

@@ -1,3 +1,5 @@
+//import necessary packages
+
 import React from "react";
 import { createStackNavigator, createAppContainer } from "react-navigation"; // Version can be specified in package.json
 import {
@@ -36,13 +38,6 @@ import ScProducts from "../../components/Explore/ScProducts";
 import ScProducts2 from "../../components/Explore/ScProducts2";
 import ScProducts3 from "../../components/Explore/ScProducts3";
 
-//Farbe grün nicht so grell
-//Choose und i weiter ausseinander
-//Low & High anpassen, evtl Icon
-//Svyve it
-
-// import styles from "./styles";
-
 export default class Comparison4 extends React.Component {
   static navigationOptions = {
     title: "Product Comparison",
@@ -59,40 +54,24 @@ export default class Comparison4 extends React.Component {
     visible: false
   };
 
+  //define Dialog
+
   _showDialog = () => this.setState({ visible: true });
 
   _hideDialog = () => this.setState({ visible: false });
 
   render() {
     return (
+
+      //define screen
+      //define CO2 scale: low to high emissions - green to red
+      //Scrollview: get products ordered after their emissions on the CO2 scale
+      //define info & choose buttons for each product
+      //after choosing product --> get tranfered to an alert saying how much leaves you earned
+      //when clicking on the info button --> go to more info about product
+      //define button to go back to scanner to scan another product
+
       <View style={styles.container}>
-        {/*           <View
-            style={{
-              flex: 1,
-              flexDirection: "row",
-              justifyContent: "flex-start",
-              alignItems: "center",
-              marginTop: "2%",
-              marginHorizontal: "5%"
-            }}
-          >
-            <Image
-              style={{ width: 30, height: 30 }}
-              source={require("../../assets/images/Attention.png")}
-            />
-            <Text
-              style={{
-                fontStyle: "normal",
-                color: "#D35150",
-                justifyContent: "center",
-                fontSize: 15,
-                marginTop: "3%",
-                marginHorizontal: "10%"
-              }}
-            >
-              Apples are not seasonal in Germany
-            </Text>
-          </View> */}
 
         <Text style={styles.title}>Low CO2 emissions</Text>
 
@@ -401,14 +380,6 @@ export default class Comparison4 extends React.Component {
                           />
                         </View>
 
-                        {/*                         <View
-                          style={{
-                            flex: 1,
-                            flexDirection: "column",
-                            justifyContent: "space-between",
-                            alignItems: "center"
-                          }}
-                        > */}
                         <Button
                           style={{
                             width: 100,
@@ -559,14 +530,6 @@ export default class Comparison4 extends React.Component {
                           />
                         </View>
 
-                        {/*                         <View
-                          style={{
-                            flex: 1,
-                            flexDirection: "column",
-                            justifyContent: "space-between",
-                            alignItems: "center"
-                          }}
-                        > */}
                         <Button
                           style={{
                             width: 100,
@@ -586,7 +549,6 @@ export default class Comparison4 extends React.Component {
                           Choose
                         </Button>
 
-                        {/* </View> */}
                       </View>
                     </View>
                   </ScrollView>
@@ -602,6 +564,8 @@ export default class Comparison4 extends React.Component {
   }
 }
 
+//define styles of buttons, texts,...
+
 const styles = StyleSheet.create({
   container: {
     flex: 1
@@ -612,11 +576,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#89A998"
-    // borderBottomColor: "white",
-    // borderLeftColor: "#89A998",
-    // borderRightColor: "#89A998",
-    // borderTopColor: "#89A998",
-    // borderWidth: 1
   },
   top2: {
     flex: 1,
@@ -624,10 +583,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "white"
-    // borderBottomColor: "white",
-    // borderLeftColor: "#89A998",
-    // borderRightColor: "#89A998",
-    // borderTopColor: "white",
   },
   title: {
     fontStyle: "normal",
@@ -707,12 +662,6 @@ const styles = StyleSheet.create({
   bottomItemInnerLeft: {
     flex: 1, // Take the entire space of the parent which is the bottomitem
     backgroundColor: "#FFF"
-    /*     borderColor: "#FFF",
-    borderWidth: 1,
-    borderRadius: 10,
-    shadowOffset: { width: -1, height: 4 },
-    shadowColor: "grey",
-    shadowOpacity: 0.5 */
   },
   bottomItemInnerRight: {
     flex: 1, // Take the entire space of the parent which is the bottomitem
