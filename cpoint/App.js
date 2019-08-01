@@ -22,6 +22,8 @@ import RootSwitchNavigator from "./navigation/RootSwitchNavigator";
 
 console.disableYellowBox = true;
 
+//create StyleSheet
+
 const styles = StyleSheet.create({
   getStartedContainer: {
     alignItems: "center",

@@ -8,12 +8,6 @@ import * as Permissions from "expo-permissions";
 
 import { BarCodeScanner } from "expo-barcode-scanner";
 
-// Touchable Opcaity: Runder Kreis um Baum und kleiner und so aussehen wie Button
-// Sieht nicht natürlich aus --> in die Top Bar?
-// BottomBar: Svyve it active grüne Abhebung
-// Gurke hängt Random --> Sache drum rum und oben --> Box drumherum + main Features
-// Quadrat Scanmal hier
-
 import {
   responsiveHeight,
   responsiveWidth,
@@ -21,6 +15,7 @@ import {
 } from "react-native-responsive-dimensions";
 
 export default class ScanProduct extends React.Component {
+  //define header
   static navigationOptions = {
     title: "Scan Product",
     headerStyle: {
@@ -31,6 +26,8 @@ export default class ScanProduct extends React.Component {
       fontWeight: "bold"
     }
   };
+  //set permissions to use camera
+  //scanner
   state = {
     hasCameraPermission: null,
     scanned: false
@@ -59,6 +56,8 @@ export default class ScanProduct extends React.Component {
     };
   }
 
+  //handle scanned information
+
   handleInput(text, property) {
     const { selectedProducts, activeProduct } = this.state;
     selectedProducts[activeProduct][property] = text;
@@ -76,6 +75,8 @@ export default class ScanProduct extends React.Component {
   }
 
   render() {
+    //define scanner and what to do when product has been scanned
+
     const {
       hasCameraPermission,
       scanned,
@@ -137,19 +138,6 @@ export default class ScanProduct extends React.Component {
               )
             }
           />
-          {/* </View> */}
-
-          {/*           <View style={styles.bottomco23}> */}
-          {/*           <IconButton
-            reverse
-            reverseColor="#89A998"
-            icon={require("../../assets/images/i.png")}
-            size={20}
-            color="#89A998"
-            onPress={() => this.handleBarCodeScanned}
-            // onPress={() => this.props.navigation.navigate("ScanProduct2")}
-          /> */}
-          {/* </View> */}
         </View>
       </View>
     );
@@ -172,10 +160,10 @@ export default class ScanProduct extends React.Component {
       ],
       { cancelable: false }
     );
-    // alert(`Bar code with type ${type} and data ${data} has been scanned!`);
   };
 }
 
+//define stlyes
 const styles = StyleSheet.create({
   container: {
     flex: 1

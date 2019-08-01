@@ -41,6 +41,9 @@ export default class Profile extends Component {
   };
   render() {
     return (
+      //here is for now the name to the svyve facebook, insta and linkedin account, but in the future:
+      //data about the user: how many trees planted, scanned products,...
+
       <View style={{ flex: 1 }}>
         <View style={{ justifyContent: "center", alignItems: "center" }}>
           <Image

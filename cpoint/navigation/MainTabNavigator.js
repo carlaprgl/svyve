@@ -1,3 +1,4 @@
+//import
 import React from "react";
 import { Platform } from "react-native";
 import {
@@ -16,6 +17,8 @@ import ScanProduct2 from "../screens/ScanProduct2/ScanProduct2";
 import ScanProduct3 from "../screens/ScanProduct3/ScanProduct3";
 import Comparison4 from "../screens/Comparison4/Comparison4";
 import Info1 from "../screens/Info1/Info1";
+
+//create the Navigator
 
 const HomeStack = createStackNavigator({
   ScanProduct: ScanProduct,

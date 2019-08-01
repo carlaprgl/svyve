@@ -58,9 +58,10 @@ export default class Info1 extends React.Component {
 
   render() {
     return (
-
       //define screen
-
+      //basic infos about product: leaves, co2, equivalent to driving car
+      //pie chart showing from where the co2 emissions are coming from
+      //Scrollview: showing seasonal products of July
 
       <View style={styles.container}>
         <View
@@ -204,6 +205,8 @@ export default class Info1 extends React.Component {
     );
   }
 }
+
+//define stylees
 
 const styles = StyleSheet.create({
   container: {

@@ -47,6 +47,11 @@ class YourScore extends React.Component {
 
   render() {
     return (
+      //show tree progress
+      //leaves collected
+      //choose different trees
+      //By clicking on plant now --> redirected to your community forest
+      //At bottom button to scan other products
       <View
         style={{
           flex: 1,
@@ -259,27 +264,6 @@ class YourScore extends React.Component {
                           Plant Now
                         </Text>
                       </Button>
-                      {/*                       <Button
-                        style={{
-                          height: 40,
-                          width: 140,
-                          display: "flex",
-                          textAlign: "center",
-                          backgroundColor: "#385723",
-                          alignContent: "center",
-                          resizeMode: "contain"
-                        }}
-                      >
-                        <Text
-                          style={{
-                            fontSize: 14,
-                            fontWeight: "normal",
-                            color: "white"
-                          }}
-                        >
-                          Donate 1.00 €
-                        </Text>
-                      </Button> */}
                     </View>
                   </View>
 
@@ -369,13 +353,6 @@ class YourScore extends React.Component {
                           this.props.navigation.navigate("Community")
                         }
                       >
-                        {/*    <View
-                          style={{
-                            flex: 2,
-                            flexDirection: "row",
-                            justifyContent: "space-evenly"
-                          }}
-                        > */}
                         <Image
                           style={{
                             width: 20,
@@ -395,29 +372,7 @@ class YourScore extends React.Component {
                         >
                           115 leaves
                         </Text>
-                        {/*  </View> */}
                       </Button>
-                      {/*                       <Button
-                        style={{
-                          height: 40,
-                          width: 140,
-                          display: "flex",
-                          textAlign: "center",
-                          backgroundColor: "#385723",
-                          alignContent: "center",
-                          resizeMode: "contain"
-                        }}
-                      >
-                        <Text
-                          style={{
-                            fontSize: 14,
-                            fontWeight: "normal",
-                            color: "white"
-                          }}
-                        >
-                          Donate 1.14 €
-                        </Text>
-                      </Button> */}
                     </View>
                   </View>
 
@@ -507,13 +462,6 @@ class YourScore extends React.Component {
                           this.props.navigation.navigate("Community")
                         }
                       >
-                        {/*       <View
-                          style={{
-                            flex: 2,
-                            flexDirection: "row",
-                            justifyContent: "space-evenly"
-                          }}
-                        > */}
                         <Image
                           style={{
                             width: 20,
@@ -533,29 +481,7 @@ class YourScore extends React.Component {
                         >
                           145 leaves
                         </Text>
-                        {/*         </View> */}
                       </Button>
-                      {/*                       <Button
-                        style={{
-                          height: 40,
-                          width: 140,
-                          display: "flex",
-                          textAlign: "center",
-                          backgroundColor: "#385723",
-                          alignContent: "center",
-                          resizeMode: "contain"
-                        }}
-                      >
-                        <Text
-                          style={{
-                            fontSize: 14,
-                            fontWeight: "normal",
-                            color: "white"
-                          }}
-                        >
-                          Donate 1.46 €
-                        </Text>
-                      </Button> */}
                     </View>
                   </View>
 
@@ -645,13 +571,6 @@ class YourScore extends React.Component {
                           this.props.navigation.navigate("Community")
                         }
                       >
-                        {/*                         <View
-                          style={{
-                            flex: 2,
-                            flexDirection: "row",
-                            justifyContent: "space-evenly"
-                          }}
-                        > */}
                         <Image
                           style={{
                             width: 20,
@@ -671,7 +590,6 @@ class YourScore extends React.Component {
                         >
                           160 leaves
                         </Text>
-                        {/*    </View> */}
                       </Button>
                     </View>
                   </View>
@@ -705,6 +623,8 @@ class YourScore extends React.Component {
 
 export default YourScore;
 
+//define styles
+
 const styles = StyleSheet.create({
   container: {
     flex: 1
@@ -715,11 +635,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#89A998"
-    // borderBottomColor: "white",
-    // borderLeftColor: "#89A998",
-    // borderRightColor: "#89A998",
-    // borderTopColor: "#89A998",
-    // borderWidth: 1
   },
   top2: {
     flex: 1,
@@ -727,10 +642,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "white"
-    // borderBottomColor: "white",
-    // borderLeftColor: "#89A998",
-    // borderRightColor: "#89A998",
-    // borderTopColor: "white",
   },
   title: {
     fontStyle: "normal",

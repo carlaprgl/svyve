@@ -28,6 +28,8 @@ class StartScreen extends React.Component {
     this.state = {};
   }
 
+  //after 2.5 seconds switching to next screen
+
   componentDidMount() {
     setTimeout(() => {
       this.props.navigation.navigate("ScanProduct");
@@ -40,7 +42,7 @@ class StartScreen extends React.Component {
 
   render() {
     return (
-      //<TouchableHighlight onPress={this.pressingScreen}>
+      //Show svyve Logo when opening the App
       <View
         style={{
           flex: 1,
@@ -62,22 +64,8 @@ class StartScreen extends React.Component {
           Svive
         </Button>
       </View>
-      //</TouchableHighlight>
     );
   }
 }
 
 export default StartScreen;
-
-/*<View style={{ flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: "#8AAA98" }}>
-        <Text>Start Screen</Text>
-        <Image source={require("../../assets/images/SVYVE.png")} />
-        <Button onPress={() => this.props.navigation.navigate("App")}>
-          Svive
-        </Button>
-      </View>*/
-/*<View style={{ flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: "#8AAA98"}}>
-        <View></View>
-          <Image source={require("../../assets/images/Svyve_white.png")}
-          style={{flex: 1, width: 0, height: 0, resizeMode: 'contain'}} />
-      </View>*/
