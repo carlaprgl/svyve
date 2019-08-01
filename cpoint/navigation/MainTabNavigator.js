@@ -27,7 +27,8 @@ const HomeStack = createStackNavigator({
   ScanProduct2: ScanProduct2,
   ScanProduct3: ScanProduct3,
   Comparison4: Comparison4,
-  Info1: Info1
+  Info1: Info1,
+  Community: Community
 });
 
 HomeStack.navigationOptions = {

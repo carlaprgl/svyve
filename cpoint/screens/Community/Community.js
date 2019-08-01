@@ -28,7 +28,59 @@ import { Dropdown } from "react-native-material-dropdown";
 import Category from "../../components/Explore/Category";
 import TreesToSelect from "../../components/Explore/TreesToSelect";
 
+//define screen
+//define dropdown button for selecting communities - join forests
+//see you forest and your tree planting
+//define button to go back to scanner to scan another product
+
 export default class Community extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isSwitchOn: false,
+      nextRoute: "YourResults",
+      multipleProducts: false,
+      activeProduct: 0,
+      selectedPackaging: false,
+      selectedProducts: [
+        {
+          id: 0,
+          productName: "",
+          productCountry: "",
+          productPackaging: false
+        }
+      ],
+      products: [
+        {
+          value: "Apple"
+        },
+        {
+          value: "Banana"
+        },
+        {
+          value: "Cucumber"
+        }
+      ],
+      countries: [
+        {
+          value: "Australia"
+        },
+        {
+          value: "Germany"
+        },
+        {
+          value: "Spain"
+        },
+        {
+          value: "Turkey"
+        },
+        {
+          value: "Ukraine"
+        }
+      ]
+    };
+  }
+
   static navigationOptions = {
     title: "Your Community Forests",
     headerStyle: {
@@ -50,12 +102,24 @@ export default class Community extends React.Component {
       selectedPackaging
     } = this.state;
 
-    return (
-      //define screen
-      //define dropdown button for selecting communities - join forests
-      //see you forest and your tree planting
-      //define button to go back to scanner to scan another product
+    const selectedProduct = selectedProducts[activeProduct];
+    const { productName, productCountry, productPackaging } = selectedProduct;
 
+    // const { nextRoute } = this.props.navigation.navigate.state;
+
+    const productList = selectedProducts.map(product => (
+      <TouchableOpacity
+        key={product.productName}
+        onPress={() => this.setState({ activeProduct: product.id })}
+        style={
+          product.id == activeProduct ? { backgroundColor: "#89A998" } : null
+        }
+      >
+        <Text>{product.productName + " " + product.productCountry}</Text>
+      </TouchableOpacity>
+    ));
+
+    return (
       <View>
         <Button
           style={{
@@ -100,7 +164,7 @@ export default class Community extends React.Component {
             style={{
               color: "#3F4E47",
               /*   width: 375,
-              height: 29.73, */
+                    height: 29.73, */
 
               fontSize: 16,
               /* lineHeight: 24, */
@@ -125,7 +189,7 @@ export default class Community extends React.Component {
             style={{
               color: "#3F4E47",
               /*    width: 375,
-              height: 29.73, */
+                    height: 29.73, */
               fontSize: 16,
               /*  lineHeight: 24, */
               fontWeight: "normal",
@@ -164,7 +228,7 @@ export default class Community extends React.Component {
             style={{
               color: "#3F4E47",
               /*   width: 375,
-              height: 29.73, */
+                    height: 29.73, */
 
               fontSize: 16,
               /* lineHeight: 24, */
