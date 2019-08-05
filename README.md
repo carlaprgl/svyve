@@ -1,3 +1,7 @@
+MPD project for KPMG Spring 2019 at CDTM.
+
+This repository contains the CDTM / KPMG app that can be run natively on Android and IOS. This app is being developed by Christian Spier, Carla Pregel-Hoderlein, Jana Petry, Katharina Brenner and Klaudia Guzij in the course of a student-project hosted at CDTM.
+
 Required development tools used in our project:
 
 - node (https://nodejs.org/en/)
